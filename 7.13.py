@@ -1,15 +1,24 @@
 class Triangle:
     def __init__(self):
-       self.side1=int(input("give a lenth of first variable"))
-       self.side2=int(input("give a lenth of second variable"))
-       self.side3=int(input("give a lenth of third variable"))
-def read_triangle():
-    b=Triangle
-    return b
-def is_triangle():
-    c=Triangle.sort()
-    if c.get(0)+c.get(1)>c.get(2):
-        print("valid triangle",read_triangle(Triangle))
-    else:
-        print("invalid triangle")
-print(is_triangle(Triangle))
+       self.side1=0
+       self.side2=0
+       self.side3=0
+
+    def read_triangle(self):
+        self.side1=float((input("give a lenth of first variable")))
+        self.side2=float((input("give a lenth of second variable")))
+        self.side3=float((input("give a lenth of third variable")))
+
+    def is_triangle(self):
+        T=False
+        if (self.side1>self.side2+self.side3):
+            if (self.side2>self.side1+self.side3):
+                if (self.side3 > self.side1 + self.side2):
+                    T=True
+                    print('this is valid')
+        else:
+            print('this is not valid triangle')
+        return T
+t1=Triangle()
+t1.read_triangle()
+t1.is_triangle()
