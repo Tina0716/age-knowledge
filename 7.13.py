@@ -12,3 +12,4 @@ def is_triangle():
         print("valid triangle",read_triangle(Triangle))
     else:
         print("invalid triangle")
+print(is_triangle(Triangle))
