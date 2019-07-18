@@ -2,8 +2,6 @@ class student:
     def __init__(self):
         self.name=''
         self.ID=0
-        self.name2=''
-        self.ID2=0
         self.GPA=0.0
     def readfromkeyboard(self):
         self.name=input("enter a name of student")
